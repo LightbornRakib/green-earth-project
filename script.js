@@ -9,9 +9,9 @@ const displayPlants = (plants) => {
         plants.forEach(plant => {
             const plantCard = document.createElement('div');
             plantCard.innerHTML = `
-            <div class=" sns card bg-white grid gap-2 p-4">
-                <div class=" ss grid gap-4">
-                    <img src="${plant.image}" alt="" class="jk w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
+                    <div class="sns card bg-white grid gap-2 p-4">
+                <div class="sns grid gap-4">
+                    <img src="${plant.image}" alt="" class="w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
                     <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
                     <p class="text-[10px] text-gray-500 h-[10vh]">${plant.description}</p>
                 </div>
@@ -313,7 +313,7 @@ const displaynewdiv=(plant)=>{
     <p class=""><span class="font-bold">Description</span> <span>${plant.description}</span></p>
     </div>
     <div class="justify-self-end mt-4">
-        <button id="close-btn" class="border bg-gray-300 p-2 rounded-lg ">Close</button>
+        <button id="close-btn" class=" bg-gray-300 p-2 rounded-lg ">Close</button>
     </div></div>
     `;
     newdivcontainer.appendChild(newdiv);
