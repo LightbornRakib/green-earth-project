@@ -304,7 +304,7 @@ const displaynewdiv=(plant)=>{
     newdivcontainer.innerHTML='';
     const newdiv = document.createElement('div');
     newdiv.innerHTML = `
-<div  class="bg-white w-lg p-8 grid gap-4 rounded-lg ">
+<div  class="bg-white w-md p-8 grid gap-4 rounded-lg lg:w-lg xl:w-lg ">
     <div class="text-xl font-bold text-center">${plant.name}</div>
     <div class="justify-self-center"><img src="${plant.image}" alt="${plant.name}" class="w-[30vh] h-[30vh]"></div>
     <div class="items-center grid justify-center mt-8 grid gap-2">
