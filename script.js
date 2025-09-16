@@ -1,11 +1,11 @@
 const displayPlants = (plants) => {
     const plantsContainer = document.getElementById('plants-container');
-    plantsContainer.innerHTML = ""; // clear old plants
+    plantsContainer.innerHTML = ""; 
 
-    showSpinner(); // show spinner immediately
 
-    // Use requestAnimationFrame or setTimeout(0) to let DOM render spinner
-    setTimeout(() => {
+
+   
+
         plants.forEach(plant => {
             const plantCard = document.createElement('div');
             plantCard.innerHTML = `
@@ -30,8 +30,7 @@ const displayPlants = (plants) => {
             plantsContainer.appendChild(plantCard);
         });
 
-        hideSpinner(); // hide spinner after all plants are added
-    }, 50); // small delay to ensure spinner shows before DOM updates
+    
 };
 
 
@@ -89,20 +88,34 @@ const displayCategories = (categories) => {
 
 labels();
 
-const categoryPlants = (id) => {
-        const startTime = performance.now();
+
+
+const fetchCategoryPlants = (id) => {
+    const startTime = performance.now(); 
+    showSpinner(); 
+
     fetch(`https://openapi.programming-hero.com/api/category/${id}`)
         .then(res => res.json())
-        .then(json => displayPlants(json.plants));
-        const endTime = performance.now(); 
-            const timeTaken = endTime - startTime
+        .then(data => {
+            displayPlants(data.plants); 
+        })
+        .catch(err => console.error(err))
+        .finally(() => {
+            hideSpinner(); 
+            const endTime = performance.now();
+            const timeTaken = endTime - startTime;
             
+
+           
+        });
 };
+
+
 
 document.addEventListener('click', (e) => {
     if (e.target.id.startsWith('category-btn-')) {
         const id = e.target.id.split('-')[2];
-        categoryPlants(id);
+       fetchCategoryPlants(id);
     }
 });
 
