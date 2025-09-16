@@ -9,9 +9,9 @@ const displayPlants = (plants) => {
         plants.forEach(plant => {
             const plantCard = document.createElement('div');
             plantCard.innerHTML = `
-            <div class="card bg-white grid gap-4 p-8">
-                <div class="grid gap-4">
-                    <img src="${plant.image}" alt="" class="w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
+            <div class=" sns card bg-white grid gap-2 p-4">
+                <div class=" ss grid gap-4">
+                    <img src="${plant.image}" alt="" class="jk w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
                     <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
                     <p class="text-[10px] text-gray-500 h-[10vh]">${plant.description}</p>
                 </div>
@@ -42,11 +42,15 @@ const firstSix = plants.slice(0, 6);
     firstSix.forEach(plant => {
         const plantCard = document.createElement('div');
         plantCard.innerHTML = `
-            <div class="card bg-white grid gap-4 p-2">
-                <div class="grid gap-4">
-                    <img src="${plant.image}" alt="" class="w-full h-full lg:w-[30vh] lg:h-[30v] md:w-[30vh] md:h-[30vh]">
+        
+
+
+
+            <div class="sns card bg-white grid gap-2 p-4">
+                <div class="sns grid gap-4">
+                    <img src="${plant.image}" alt="" class="w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
                     <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
-                    <p class="text-[10px] text-gray-500">${plant.description}</p>
+                    <p class="text-[10px] text-gray-500 h-[10vh]">${plant.description}</p>
                 </div>
                 <div class="flex justify-between items-center">
                     <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 text-[12px] font-bold border-none">${plant.category}</button>
