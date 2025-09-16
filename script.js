@@ -17,7 +17,7 @@ const displayPlants = (plants) => {
                     </div>
                     <div class="flex justify-between items-center">
                         <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 text-[12px] font-bold border-none">${plant.category}</button>
-                        <p><span>$</span><span class="font-bold">${plant.price}</span></p>
+                        <p><span>৳</span><span class="font-bold">${plant.price}</span></p>
                     </div>
                     <button class="w-full rounded-3xl bg-green-800 text-white font-bold text-center p-2 mt-4">Add to Cart</button>
                 </div>
@@ -50,7 +50,7 @@ const firstSix = plants.slice(0, 6);
                 </div>
                 <div class="flex justify-between items-center">
                     <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 text-[12px] font-bold border-none">${plant.category}</button>
-                    <p><span>$</span><span class="font-bold">${plant.price}</span></p>
+                    <p><span>৳</span><span class="font-bold">${plant.price}</span></p>
                 </div>
                 <div class="w-full rounded-3xl bg-green-800 text-white font-bold text-center p-2 mt-4" id="add-to-cart-btn-${plant.id}">Add to Cart</div>
             </div>
@@ -176,7 +176,7 @@ const addToCartHistory = (plant) => {
                 <div>
                     <p class="font-bold">${plant.name}</p>
                     <p class="text-gray-500">
-                        <span>$</span><span class="plant-price">${plant.price}</span>
+                        <span>৳</span><span class="plant-price">${plant.price}</span>
                         <span>x<span id="countingclick-${plant.id}">1</span></span>
                     </p>
                 </div>
@@ -265,7 +265,7 @@ const displaynewdiv=(plant)=>{
     <div class="justify-self-center"><img src="${plant.image}" alt="${plant.name}" class="w-[40vh] h-[40vh]"></div>
     <div class="items-center grid justify-center mt-8 grid gap-2">
     <p class="font-bold">Category: <span class="tree-category">${plant.category}</span></p>
-    <p class="font-bold">Price: <span class="tree-price">$${plant.price}</span></p>
+    <p class="font-bold">Price: <span class="tree-price">৳${plant.price}</span></p>
     <p class=""><span class="font-bold">Description</span> <span>${plant.description}</span></p>
     </div>
     <div class="justify-self-end mt-4">
