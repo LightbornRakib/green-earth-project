@@ -9,19 +9,19 @@ const displayPlants = (plants) => {
         plants.forEach(plant => {
             const plantCard = document.createElement('div');
             plantCard.innerHTML = `
-                <div class="card bg-white grid gap-4 p-2" id="l">
-                    <div class="grid gap-4">
-                        <img src="${plant.image}" alt="" class="w-[30vh] h-[30vh]">
-                        <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
-                        <p class="text-[10px] text-gray-500">${plant.description}</p>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 text-[12px] font-bold border-none">${plant.category}</button>
-                        <p><span>৳</span><span class="font-bold">${plant.price}</span></p>
-                    </div>
-                    <button class="w-full rounded-3xl bg-green-800 text-white font-bold text-center p-2 mt-4">Add to Cart</button>
+            <div class="card bg-white grid gap-4 p-8">
+                <div class="grid gap-4">
+                    <img src="${plant.image}" alt="" class="w-full h-full md:w-[30vh] md:h-[30vh] lg:w-[30vh] lg:h-[30vh] justify-self-center">
+                    <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
+                    <p class="text-[10px] text-gray-500 h-[10vh]">${plant.description}</p>
                 </div>
-            `;
+                <div class="flex justify-between items-center">
+                    <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 text-[12px] font-bold border-none">${plant.category}</button>
+                    <p><span>৳</span><span class="font-bold">${plant.price}</span></p>
+                </div>
+                <div class="w-full rounded-3xl bg-green-800 text-white font-bold text-center p-2 mt-4" id="add-to-cart-btn-${plant.id}">Add to Cart</div>
+            </div>
+        `;
             const button = plantCard.querySelector('.button-name');
             button.id = `plant-card-${plant.id}`;
             const addToCartButton = plantCard.querySelector('.w-full');
@@ -44,7 +44,7 @@ const firstSix = plants.slice(0, 6);
         plantCard.innerHTML = `
             <div class="card bg-white grid gap-4 p-2">
                 <div class="grid gap-4">
-                    <img src="${plant.image}" alt="" class="w-[30vh] h-[30vh]">
+                    <img src="${plant.image}" alt="" class="w-full h-full lg:w-[30vh] lg:h-[30v] md:w-[30vh] md:h-[30vh]">
                     <button class="button-name hover:text-green-800 text-md font-bold">${plant.name}</button>
                     <p class="text-[10px] text-gray-500">${plant.description}</p>
                 </div>
@@ -79,9 +79,49 @@ const displayCategories = (categories) => {
     const categoriesContainer = document.getElementById('categories-container');
     categories.forEach(category => {
         const categoryButton = document.createElement('button');
-        categoryButton.className = "btn btn-outline btn-success border-none text-black w-full justify-start text-left";
+        categoryButton.className = "btn btn-outline btn-success border-none hover:bg-green-800 text-black w-full justify-start text-left";
         categoryButton.id = `category-btn-${category.id}`;
         categoryButton.innerText = category.category_name;
+
+
+         categoryButton.addEventListener('click', () => {
+        
+        categoriesContainer.querySelectorAll('button').forEach(btn => {
+          
+            btn.classList.remove('bg-green-800', 'text-white');
+            btn.classList.add('btn-outline', 'btn-success', 'text-black');
+        });
+
+    
+        categoryButton.classList.add('bg-green-800', 'text-white');
+        categoryButton.classList.remove('btn-outline', 'btn-success', 'text-black');
+        
+        const id = category.id;
+        categoryPlants(id); 
+    });
+const allTrees = document.getElementById('all-trees');
+
+      allTrees.addEventListener('click', () => {
+        
+        categoriesContainer.querySelectorAll('button').forEach(btn => {
+          
+            btn.classList.remove('bg-green-800', 'text-white');
+            btn.classList.add('btn-outline', 'btn-success', 'text-black');
+        });
+
+       allTrees.classList.add('bg-green-800', 'text-white');
+        allTrees.classList.remove('btn-outline', 'btn-success', 'text-black');
+       
+        
+        const id = category.id;
+        categoryPlants(id); 
+    });
+
+
+
+
+
+
         categoriesContainer.appendChild(categoryButton);
     });
 };

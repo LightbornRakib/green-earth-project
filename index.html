@@ -28,32 +28,32 @@
 
    <div>
 
-    <button class="btn btn-warning rounded-3xl text-green-800 font-bold">Plant a Tree</button>
+    <button class="btn btn-warning rounded-3xl text-green-800 font-bold" onclick="location.href='#plant-a-tree'">Plant a Tree</button>
    </div>
 </div>
 
+<div class="">
 
-
-<div class=" flex  mt-4 justify-between items-center bg-green-100">
+<div class=" flex p-4 mt-4 justify-between items-center bg-green-100">
     <div class="mt-12"><img src="assets/hero-leaf1.png" alt="" class=""></div>
 <div class=" grid gap-4 items-center text-center"><h1 class="text-2xl font-bold">Plant a Tree, Grow a Future</h1>
 <p class="text-sm text-gray-500">Join our missions to plant 1 million trees and make the Earth greener for future generations.</p>
- <button class="btn btn-warning rounded-3xl text-green-800 w-1/2 justify-self-center font-bold">Get Started</button></div>
+ <button class="btn btn-warning rounded-3xl text-green-800 justify-self-center font-bold">Get Started</button></div>
 
  <div class="mt-12"><img src="assets/hero-leaf2.png" alt=""></div>
 
 </div>
 
 
-<div class=" p-8 block bg-green-50">
-<h2 class="text-lg font-bold text-center">Choose Your Trees</h2>
+<div class=" p-8 block bg-green-50 ">
+<!-- <h2 class="text-lg font-bold text-center">Choose Your Trees</h2> -->
 
 
-<div class=" flex justify-between gap-4 mt-4">
-    <div class="block w-[30vh] p-2 text-left " >
+<div class=" grid justify-center gap-4 mt-4 lg:flex lg:justify-between">
+    <div class="block bg-white justify-self-center rounded-md w-full mb-8 lg:mb-0 lg:w-[30vh] p-2 text-left " >
 <h2 class="text-xl font-bold">Categories</h2><br>
 
-<div id="categories-container" class="grid">
+<div id="categories-container" class=" grid justify-self-center md:justify-center lg: justify-center">
 <button class="btn btn-outline btn-success border-none text-black w-full justify-start text-left" id="all-trees">
   All Trees
 </button>
@@ -69,42 +69,21 @@
     <div class="w-4 h-4 bg-black rounded-full animate-bounce delay-300"></div>
   </div>
 </div>
-<div class="grid grid-cols-3 gap-4 max-w-[100vh]" id="plants-container">
 
- <div id="plants-spinner" class="absolute inset-0  bg-opacity-70 flex items-center justify-center z-10 hidden">
-  <div class="flex space-x-2">
-    <div class="w-4 h-4 bg-black rounded-full animate-bounce"></div>
-    <div class="w-4 h-4 bg-black rounded-full animate-bounce delay-150"></div>
-    <div class="w-4 h-4 bg-black rounded-full animate-bounce delay-300"></div>
-  </div>
-</div>
+<div class="grid gap-4">
+    <h2 class="text-lg font-bold text-center">Choose Your Trees</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[100vh] md:justify-center" id="plants-container">
 
 
 
-     <!-- <div class="card bg-white grid gap-4  p-2">
 
-<div class=" ">
-    <img src="https://i.ibb.co.com/cSQdg7tf/mango-min.jpg" alt="" class="w-[20vh] h-[20vh]">
-    <p class="text-md font-bold">Mango Tree</p>
-    <p class="text-sm text-gray-500">A fast growing mango tree Lorem ipsum dolor sit amet 
-        consectetur adipisicing elit. Maiores accusantium voluptate harum quas. Natus et neque quo! 
-        Aut nihil veritatis ab rem quod, quas cumque commodi ipsa natus molestias. Ab.</p>
 
+   
 
 </div>
-
-<div class="flex justify-between  items-center">
- <button class="btn btn-warning rounded-3xl bg-green-100 text-green-500 w-1/2 justify-self-center font-bold">Fruit Tree</button>
-<p><span>৳</span><span class="font-bold">500</span></p>
-</div>
-<div class=" w-full rounded-3xl bg-green-800 text-white font-bold text-center p-2">Add to Cart</div>
-
-    </div> -->
-
-
 </div>
 
-<div class=" p-2 bg-white w-[20vh]">
+<div class=" p-2 bg-white w-full mt-8 md:w-full lg:w-[30vh]">
 <h2 class="text-lg font-bold ">Your Cart</h2>
 
 <div class=" grid gap-4" id="history-container">
@@ -144,7 +123,7 @@
     </h1>
 
 
-    <div class="flex gap-8">
+    <div class="grid lg:flex lg:gap-8 justify-center md:justify-center">
         <img src="assets/about.png" alt="">
       <div class=" p-4 justify-between items-center">
         <div class="f  mt-40"><p class="text-md text-gray-500">
@@ -179,11 +158,11 @@ Support for local communities
 
 
 <div class=" grid gap-8 p-16 bg-green-100">
-    <div class="items-center flex justify-center" >
+    <div class="items-center grid justify-center lg:flex " >
 <h2 class="text-xl font-bold">Our Impact</h2>
     </div>
 
-    <div. class="flex justify-center gap-32">
+    <div class="grid justify-center gap-8 lg:grid-cols-3">
 
 <div class=" bg-white p-4 items-center w-[30vh] rounded-lg">
     <p class="text-2xl text-green-800 font-bold text-center">500k+</p>
@@ -218,7 +197,7 @@ Support for local communities
 
 
 
-<div class=" grid justify-center items-center gap-4 bg-green-800 p-16">
+<div class=" grid justify-center items-center gap-4 bg-green-800 p-16" id="plant-a-tree" >
 <h2 class="text-xl font-bold text-center text-white">Plant a Tree Today</h2>
 
 <div class=" p-4 bg-green-700 rounded-lg">
