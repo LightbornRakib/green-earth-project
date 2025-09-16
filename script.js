@@ -304,13 +304,13 @@ const displaynewdiv=(plant)=>{
     newdivcontainer.innerHTML='';
     const newdiv = document.createElement('div');
     newdiv.innerHTML = `
-<div  class="bg-white p-4 grid gap-4 rounded-lg ">
-    <div class="text-2xl font-bold text-center">${plant.name}</div>
-    <div class="justify-self-center"><img src="${plant.image}" alt="${plant.name}" class="w-[40vh] h-[40vh]"></div>
+<div  class="bg-white w-lg p-8 grid gap-4 rounded-lg ">
+    <div class="text-xl font-bold text-center">${plant.name}</div>
+    <div class="justify-self-center"><img src="${plant.image}" alt="${plant.name}" class="w-[30vh] h-[30vh]"></div>
     <div class="items-center grid justify-center mt-8 grid gap-2">
-    <p class="font-bold">Category: <span class="tree-category">${plant.category}</span></p>
+    <p class="font-bold">Category: <span class="tree-category text-sm">${plant.category}</span></p>
     <p class="font-bold">Price: <span class="tree-price">৳${plant.price}</span></p>
-    <p class=""><span class="font-bold">Description</span> <span>${plant.description}</span></p>
+    <p class=""><span class="font-bold text-sm">Description</span> <span>${plant.description}</span></p>
     </div>
     <div class="justify-self-end mt-4">
         <button id="close-btn" class=" bg-gray-300 p-2 rounded-lg ">Close</button>
