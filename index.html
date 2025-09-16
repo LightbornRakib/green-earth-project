@@ -18,15 +18,15 @@
 <body class="bg-green-50" >
 
  
-<div class="flex justify-between items-center  p-2 bg-green-800 text-white">
-    <div>
+<div class=" grid grid-cols-1 justify-between gap-4 items-center p-2 bg-green-800 text-white md:flex lg:flex">
+    <div class="justify-self-center">
     <a href="">Green Earth</a></div>
 
 
-   <div class="flex gap-8 "><a href="">About</a><a href="">Gallery</a><a href="">Plant a Tree</a></div>
+   <div class="flex gap-8 justify-self-center"><a href="">About</a><a href="">Gallery</a><a href="">Plant a Tree</a></div>
 
 
-   <div>
+   <div class="justify-self-center">
 
     <button class="btn btn-warning rounded-3xl text-green-800 font-bold" onclick="location.href='#plant-a-tree'">Plant a Tree</button>
    </div>
@@ -200,12 +200,12 @@ Support for local communities
 <div class=" grid justify-center items-center gap-4 bg-green-800 p-16" id="plant-a-tree" >
 <h2 class="text-xl font-bold text-center text-white">Plant a Tree Today</h2>
 
-<div class=" p-4 bg-green-700 rounded-lg">
-    <form action="" class="grid gap-2 justify-center ">
+<div class=" p-4 bg-green-700 rounded-lg ">
+    <form action="" class="grid gap-2 justify-center items-center">
 
-<input type="text" placeholder="Your Name" class="input input-md w-[40vh]" />
-<input type="text" placeholder="Your Email Address" class="input input-md w-[40vh]" />
-<select class="select select-md w-[40vh]" class="w-[40vh]">
+<input type="text" placeholder="Your Name" class="input input-md w-[40vh] justify-self-center" />
+<input type="text" placeholder="Your Email Address" class="input input-md w-[40vh] justify-self-center" />
+<select class="select select-md w-[40vh] justify-self-center" class="w-[40vh]">
   <option disabled selected>Number of Trees</option>
   <option>10</option>
   <option>50</option>
@@ -230,7 +230,7 @@ Support for local communities
 
 <div id="popupOverlay" 
      class="fixed inset-0 bg-black/40 flex items-center justify-center hidden" style="opacity:300;">
-  <div class="grid bg-white justify-self-center border rounded-md  bg-white max-w-lg w-full">
+  <div class="grid bg-white justify-self-center rounded-md  bg-white max-w-lg w-full">
     <div id="popupContent" class="bg-white">
       <!-- Content-->
     </div>
